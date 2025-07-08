@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../../assets/react.svg';
 
 const Footer: React.FC = () => {
   return (
@@ -7,7 +6,6 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-10 flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
         {/* Logo & Brand */}
         <div className="flex items-center mb-6 md:mb-0">
-          <img src={logo} alt="ThenaAir Logo" className="h-10 w-10 mr-3" />
           <span className="font-bold text-xl tracking-wide text-white">ThenaAir</span>
         </div>
         {/* Links */}
