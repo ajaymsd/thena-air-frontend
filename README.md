@@ -8,15 +8,17 @@ This is the **frontend** of the Flight Booking System built with **React** and *
 ## 📁 Folder Structure
 
 ```
-flight-booking-frontend/
+thena-air-frontend/
 ├── public/                 # Static files and index.html
 ├── src/
 │   ├── assets/            # Images and icons
 │   ├── components/        # Reusable UI components (Buttons, Navbar, FlightCard)
-│   ├── pages/             # Page-level components (Home, Search, Booking, Admin)
 │   ├── services/          # API functions (bookings, payments, flights)
 │   ├── context/           # React Context for global state (AuthProvider)
-│   ├── styles/            # Global styles and Tailwind setup
+│   ├── utils/             # Contains all Utilities
+│   ├── hooks/             # Custom Hooks
+│   ├── store/             # Redux stores
+│   ├── router/            # Contains App Router
 │   ├── App.jsx            # Main app structure and routes
 │   └── main.jsx           # React entry point
 ├── .env                   # Environment variables (never commit)
@@ -45,7 +47,7 @@ npm install
 VITE_SUPABASE_URL=https://your-project.supabase.co
 VITE_SUPABASE_ANON_KEY=your-anon-key
 VITE_API_BASE_URL=https://your-backend.vercel.app/api
-
+VITE_RAZORPAY_KEY_ID=your-razorpay-key-id
 ```
 
 4. **Start the Dev Server**
