@@ -1,5 +1,5 @@
 
-# ✈️ Flight Booking System – Frontend
+# ✈️ ThenaAir Flight Booking System – Frontend
 
 This is the **frontend** of the Flight Booking System built with **React** and **Tailwind CSS**. It interacts with a backend (Node.js + Express) and Supabase for authentication and database.
 
@@ -45,6 +45,7 @@ npm install
 VITE_SUPABASE_URL=https://your-project.supabase.co
 VITE_SUPABASE_ANON_KEY=your-anon-key
 VITE_API_BASE_URL=https://your-backend.vercel.app/api
+
 ```
 
 4. **Start the Dev Server**
@@ -70,16 +71,24 @@ Visit `http://localhost:5173` in your browser.
 
 ## 🌐 Routing & Authentication Flow
 
-| Route | Description |
-|-------|-------------|
-| `/` | Home / Search flights |
-| `/search` | Flight results |
-| `/book` | Passenger & payment form |
-| `/thank-you` | After successful payment |
-| `/dashboard` | View user bookings |
-| `/admin` | Admin login |
-| `/admin/flights` | Admin flight CRUD |
-| `/admin/bookings` | Admin booking list |
+| Path                | Component        | Access Type     | Description                                     |
+|---------------------|------------------|------------------|-------------------------------------------------|
+| `/`                 | HomePage         | Public           | Landing & search page                           |
+| `/login`            | Login            | Public           | User login form                                 |
+| `/signup`           | SignUp           | Public           | User registration form                          |
+| `/home`             | HomePage         | Protected        | User dashboard                                  |
+| `/profile`          | ProfilePage      | Protected        | Profile info page                               |
+| `/booking`          | BookingPage      | Protected        | Booking form (passenger details)                |
+| `/checkout`         | CheckoutPage     | Protected        | Razorpay payment form                           |
+| `/admin/login`      | AdminLogin       | Public           | Admin login                                     |
+| `/admin/signup`     | AdminSignUp      | Public           | Admin registration                              |
+| `/admin/dashboard`  | AdminDashboard   | Admin Protected  | Admin home with analytics                       |
+| `/admin/add-flight` | AddFlight        | Admin Protected  | Add new flight                                  |
+| `/admin/bookings`   | BookingsList     | Admin Protected  | View/manage bookings                            |
+| `/admin/flights`    | FlightsList      | Admin Protected  | Manage flight records                           |
+| `/admin/payments`   | PaymentsList     | Admin Protected  | Payment overview                                |
+| `*`                 | NotFoundPage     | Public           | Fallback for invalid URLs                       |
+
 
 - Auth is managed by Supabase.
 - Token/session is stored via Supabase client and context API.
@@ -92,7 +101,8 @@ Visit `http://localhost:5173` in your browser.
 |-----|-------------|
 | `VITE_SUPABASE_URL` | Your Supabase project URL |
 | `VITE_SUPABASE_ANON_KEY` | Supabase public anon key |
-| `VITE_API_BASE_URL` | Your deployed backend API base URL |
+| `VITE_API_BASE_URL` | Your backend API base URL |
+| `VITE_RAZORPAY_KEY_ID` | Your Razorpay Key ID |
 
 ---
 
@@ -107,11 +117,10 @@ Visit `http://localhost:5173` in your browser.
 
 ---
 
-## 🖼️ Screenshots (Optional)
-
-Add screenshots of search, booking, ticket, and admin panel views here.
-
+## 🖼️ Sample Screenshots
 ---
+![screencapture-thena-air-frontend-vercel-app-2025-07-09-16_03_02](https://github.com/user-attachments/assets/2ac4e91e-b0d7-4e24-8984-eda405e23777)
+![screencapture-thena-air-frontend-vercel-app-booking-2025-07-09-16_42_15](https://github.com/user-attachments/assets/1605b005-c717-4945-9444-87a1d6696230)
 
 ## 🙌 Contributing
 
