@@ -31,8 +31,8 @@ flight-booking-frontend/
 
 1. **Clone the Repository**
 ```bash
-git clone https://github.com/your-username/flight-booking-frontend.git
-cd flight-booking-frontend
+git clone https://github.com/ajaymsd/thena-air-frontend
+cd thena-air-frontend
 ```
 
 2. **Install Dependencies**
