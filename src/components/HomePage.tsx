@@ -114,17 +114,32 @@ const HomePage: React.FC = () => {
     let filtered = allFlights;
 
     if (searchForm.from) {
-      filtered = filtered.filter(flight => flight.from_airport.toLowerCase().includes(searchForm.from.toLowerCase()));
+      filtered = filtered.filter(flight =>
+        flight.from_airport.toLowerCase().includes(searchForm.from.toLowerCase())
+      );
     }
+
     if (searchForm.to) {
-      filtered = filtered.filter(flight => flight.to_airport.toLowerCase().includes(searchForm.to.toLowerCase()));
+      filtered = filtered.filter(flight =>
+        flight.to_airport.toLowerCase().includes(searchForm.to.toLowerCase())
+      );
     }
+
+    if (searchForm.departureDate) {
+      filtered = filtered.filter(flight =>
+        flight.departure_time.startsWith(searchForm.departureDate)
+      );
+    }
+
     if (searchForm.cabinClass && searchForm.cabinClass !== 'All') {
-      filtered = filtered.filter(flight => flight.cabins.some(cabin => cabin.cabin_class === searchForm.cabinClass));
+      filtered = filtered.filter(flight =>
+        flight.cabins.some(cabin => cabin.cabin_class === searchForm.cabinClass)
+      );
     }
 
     setFilteredFlights(filtered);
-  };
+};
+
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;

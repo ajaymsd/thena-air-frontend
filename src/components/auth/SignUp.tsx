@@ -45,7 +45,7 @@ const SignUp: React.FC = () => {
       if (error) {
         setError(error.message)
       } else {
-        setMessage('Account created! Please check your email and click the confirmation link to activate your account. You can complete your profile after logging in.')
+        setMessage('Account created! Please Login to Book Tickets');
       }
     } catch (err) {
       setError('An unexpected error occurred')
