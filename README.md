@@ -140,7 +140,3 @@ git push origin feature/your-feature
 ```
 
 ---
-
-## 📄 License
-
-This project is for educational/assignment purposes only.
